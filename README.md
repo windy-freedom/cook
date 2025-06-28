@@ -1,4 +1,4 @@
-# @windy-freedom/cook
+# cook-mcp-windy
 
 HowToCook MCP Server - Intelligent Chinese recipe management and meal planning for AI assistants
 
@@ -7,16 +7,16 @@ HowToCook MCP Server - Intelligent Chinese recipe management and meal planning f
 ### Install and Run
 ```bash
 # Start the MCP server
-npx @windy-freedom/cook start
+npx cook-mcp-windy start
 
 # Show available tools and features
-npx @windy-freedom/cook info
+npx cook-mcp-windy info
 
 # Test the server
-npx @windy-freedom/cook test
+npx cook-mcp-windy test
 
 # Generate MCP configuration
-npx @windy-freedom/cook config
+npx cook-mcp-windy config
 ```
 
 ### MCP Client Configuration
@@ -28,7 +28,7 @@ For Claude Desktop, add this to your MCP settings:
   "mcpServers": {
     "howtocook": {
       "command": "npx",
-      "args": ["@windy-freedom/cook", "start"]
+      "args": ["cook-mcp-windy", "start"]
     }
   }
 }
