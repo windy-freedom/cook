@@ -1,0 +1,90 @@
+name: Publish to NPM
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run linting
+        run: npm run lint
+      
+      - name: Build project
+        run: npm run build
+      
+      - name: Test CLI
+        run: |
+          node dist/cli.js --help
+          node dist/cli.js info
+      
+      - name: Test MCP tools
+        run: node dist/cli.js test
+        continue-on-error: true
+
+  publish:
+    needs: test
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Prepare for publishing
+        run: node scripts/prepare-publish.js
+      
+      - name: Publish to NPM
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            ## HowToCook MCP Server Release
+            
+            ### Installation
+            ```bash
+            npx @windy-freedom/cook start
+            ```
+            
+            ### What's New
+            - Chinese recipe management and meal planning
+            - 5 MCP tools for AI assistants
+            - Intelligent shopping list generation
+            - Recipe scaling and nutritional analysis
+            
+            ### Quick Start
+            1. Install: `npx @windy-freedom/cook start`
+            2. Configure your MCP client (e.g., Claude Desktop)
+            3. Start cooking with AI assistance!
+          draft: false
+          prerelease: false

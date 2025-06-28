@@ -1,0 +1,168 @@
+[
+  {
+    "id": "recipe_001",
+    "name": "红烧肉",
+    "description": "经典的红烧肉，肥瘦相间，入口即化",
+    "category": "荤菜",
+    "difficulty": "中等",
+    "servings": 4,
+    "prepTime": "20分钟",
+    "cookTime": "1小时30分钟",
+    "totalTime": "1小时50分钟",
+    "ingredients": [
+      { "name": "五花肉", "amount": "500g", "notes": "切成2cm见方的块" },
+      { "name": "冰糖", "amount": "30g" },
+      { "name": "生抽", "amount": "2汤匙" },
+      { "name": "老抽", "amount": "1汤匙" },
+      { "name": "料酒", "amount": "2汤匙" },
+      { "name": "葱", "amount": "2根", "notes": "切段" },
+      { "name": "姜", "amount": "3片" },
+      { "name": "八角", "amount": "2个" },
+      { "name": "桂皮", "amount": "1小段" }
+    ],
+    "steps": [
+      { "stepNumber": 1, "instruction": "五花肉洗净切块，冷水下锅焯水去腥", "duration": "5分钟" },
+      { "stepNumber": 2, "instruction": "热锅下肉块，小火煸炒出油", "duration": "10分钟" },
+      { "stepNumber": 3, "instruction": "加入冰糖炒糖色，炒至肉块上色", "duration": "5分钟" },
+      { "stepNumber": 4, "instruction": "加入生抽、老抽、料酒翻炒均匀", "duration": "2分钟" },
+      { "stepNumber": 5, "instruction": "加入葱段、姜片、八角、桂皮", "duration": "1分钟" },
+      { "stepNumber": 6, "instruction": "加开水没过肉块，大火烧开转小火炖煮", "duration": "1小时" },
+      { "stepNumber": 7, "instruction": "大火收汁，汤汁浓稠即可", "duration": "5分钟" }
+    ],
+    "tags": ["经典", "下饭", "家常菜"],
+    "cookingMethods": ["炒", "炖"],
+    "nutritionalInfo": { "calories": 450 },
+    "tips": ["糖色要炒好，这样颜色才漂亮", "炖煮时间要足够，肉才会软烂"],
+    "dateAdded": "2024-01-01T00:00:00Z",
+    "lastModified": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "recipe_002",
+    "name": "麻婆豆腐",
+    "description": "四川经典菜品，麻辣鲜香",
+    "category": "素菜",
+    "difficulty": "简单",
+    "servings": 3,
+    "prepTime": "10分钟",
+    "cookTime": "15分钟",
+    "totalTime": "25分钟",
+    "ingredients": [
+      { "name": "嫩豆腐", "amount": "400g", "notes": "切成2cm见方的块" },
+      { "name": "肉末", "amount": "100g" },
+      { "name": "豆瓣酱", "amount": "1汤匙" },
+      { "name": "花椒粉", "amount": "1茶匙" },
+      { "name": "葱花", "amount": "适量" },
+      { "name": "蒜末", "amount": "1茶匙" },
+      { "name": "生抽", "amount": "1汤匙" },
+      { "name": "淀粉", "amount": "1茶匙", "notes": "用水调成水淀粉" }
+    ],
+    "steps": [
+      { "stepNumber": 1, "instruction": "豆腐切块，用盐水焯一下去豆腥味", "duration": "3分钟" },
+      { "stepNumber": 2, "instruction": "热锅下油，爆香蒜末", "duration": "1分钟" },
+      { "stepNumber": 3, "instruction": "下肉末炒散炒香", "duration": "3分钟" },
+      { "stepNumber": 4, "instruction": "加入豆瓣酱炒出红油", "duration": "2分钟" },
+      { "stepNumber": 5, "instruction": "加水烧开，下豆腐块轻轻推匀", "duration": "3分钟" },
+      { "stepNumber": 6, "instruction": "用水淀粉勾芡，撒花椒粉和葱花即可", "duration": "2分钟" }
+    ],
+    "tags": ["川菜", "麻辣", "下饭"],
+    "cookingMethods": ["炒", "烧"],
+    "nutritionalInfo": { "calories": 180 },
+    "dateAdded": "2024-01-02T00:00:00Z",
+    "lastModified": "2024-01-02T00:00:00Z"
+  },
+  {
+    "id": "recipe_003",
+    "name": "清蒸鲈鱼",
+    "description": "鲜美的清蒸鱼，保持鱼的原汁原味",
+    "category": "水产",
+    "difficulty": "简单",
+    "servings": 4,
+    "prepTime": "15分钟",
+    "cookTime": "12分钟",
+    "totalTime": "27分钟",
+    "ingredients": [
+      { "name": "鲈鱼", "amount": "1条", "notes": "约500g，处理干净" },
+      { "name": "蒸鱼豉油", "amount": "2汤匙" },
+      { "name": "料酒", "amount": "1汤匙" },
+      { "name": "葱丝", "amount": "适量" },
+      { "name": "姜丝", "amount": "适量" },
+      { "name": "红椒丝", "amount": "少许", "notes": "装饰用" },
+      { "name": "食用油", "amount": "2汤匙" }
+    ],
+    "steps": [
+      { "stepNumber": 1, "instruction": "鲈鱼洗净，两面打花刀，用料酒腌制", "duration": "10分钟" },
+      { "stepNumber": 2, "instruction": "鱼身放姜丝，蒸锅水开后放入蒸8分钟", "duration": "8分钟" },
+      { "stepNumber": 3, "instruction": "蒸好后倒掉盘中的水，淋上蒸鱼豉油", "duration": "1分钟" },
+      { "stepNumber": 4, "instruction": "撒上葱丝和红椒丝", "duration": "1分钟" },
+      { "stepNumber": 5, "instruction": "热油浇在葱丝上激出香味即可", "duration": "2分钟" }
+    ],
+    "tags": ["清淡", "鲜美", "营养"],
+    "cookingMethods": ["蒸"],
+    "nutritionalInfo": { "calories": 120 },
+    "tips": ["鱼一定要新鲜", "蒸的时间不要过长，以免肉质老化"],
+    "dateAdded": "2024-01-03T00:00:00Z",
+    "lastModified": "2024-01-03T00:00:00Z"
+  },
+  {
+    "id": "recipe_004",
+    "name": "番茄鸡蛋面",
+    "description": "简单快手的家常面条",
+    "category": "主食",
+    "difficulty": "简单",
+    "servings": 2,
+    "prepTime": "5分钟",
+    "cookTime": "10分钟",
+    "totalTime": "15分钟",
+    "ingredients": [
+      { "name": "挂面", "amount": "200g" },
+      { "name": "鸡蛋", "amount": "2个" },
+      { "name": "番茄", "amount": "2个", "notes": "切块" },
+      { "name": "葱花", "amount": "适量" },
+      { "name": "盐", "amount": "适量" },
+      { "name": "糖", "amount": "1茶匙" },
+      { "name": "生抽", "amount": "1汤匙" }
+    ],
+    "steps": [
+      { "stepNumber": 1, "instruction": "鸡蛋打散炒熟盛起", "duration": "2分钟" },
+      { "stepNumber": 2, "instruction": "番茄下锅炒出汁水", "duration": "3分钟" },
+      { "stepNumber": 3, "instruction": "加水烧开，下面条煮熟", "duration": "3分钟" },
+      { "stepNumber": 4, "instruction": "加入炒蛋，调味即可", "duration": "2分钟" }
+    ],
+    "tags": ["快手", "家常", "营养"],
+    "cookingMethods": ["炒", "煮"],
+    "nutritionalInfo": { "calories": 320 },
+    "dateAdded": "2024-01-04T00:00:00Z",
+    "lastModified": "2024-01-04T00:00:00Z"
+  },
+  {
+    "id": "recipe_005",
+    "name": "冬瓜排骨汤",
+    "description": "清淡营养的汤品，适合夏天",
+    "category": "汤羹",
+    "difficulty": "简单",
+    "servings": 4,
+    "prepTime": "15分钟",
+    "cookTime": "45分钟",
+    "totalTime": "1小时",
+    "ingredients": [
+      { "name": "排骨", "amount": "300g", "notes": "斩段" },
+      { "name": "冬瓜", "amount": "400g", "notes": "去皮切块" },
+      { "name": "姜片", "amount": "3片" },
+      { "name": "葱段", "amount": "2根" },
+      { "name": "盐", "amount": "适量" },
+      { "name": "胡椒粉", "amount": "少许" }
+    ],
+    "steps": [
+      { "stepNumber": 1, "instruction": "排骨冷水下锅焯水去血沫", "duration": "5分钟" },
+      { "stepNumber": 2, "instruction": "另起锅加水，放入排骨、姜片大火烧开", "duration": "5分钟" },
+      { "stepNumber": 3, "instruction": "转小火炖煮30分钟", "duration": "30分钟" },
+      { "stepNumber": 4, "instruction": "加入冬瓜块继续煮10分钟", "duration": "10分钟" },
+      { "stepNumber": 5, "instruction": "调味撒葱花即可", "duration": "2分钟" }
+    ],
+    "tags": ["清淡", "营养", "汤品"],
+    "cookingMethods": ["炖"],
+    "nutritionalInfo": { "calories": 150 },
+    "dateAdded": "2024-01-05T00:00:00Z",
+    "lastModified": "2024-01-05T00:00:00Z"
+  }
+]
