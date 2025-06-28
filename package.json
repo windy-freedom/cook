@@ -1,11 +1,10 @@
 {
   "name": "cook-mcp-windy",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "HowToCook MCP Server - Intelligent Chinese recipe management and meal planning for AI assistants",
   "main": "dist/index.js",
   "type": "module",
   "bin": {
-    "cook-mcp": "dist/cli.js",
     "cook-mcp-windy": "dist/cli.js"
   },
   "scripts": {
@@ -20,7 +19,7 @@
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
     "prepublishOnly": "npm run build",
-    "postinstall": "echo 'HowToCook MCP Server installed successfully! Use: npx @windy-freedom/cook --help'"
+    "postinstall": "echo 'HowToCook MCP Server installed successfully! Use: npx cook-mcp-windy --help'"
   },
   "keywords": [
     "mcp",

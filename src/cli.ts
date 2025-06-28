@@ -21,7 +21,7 @@ const packageJson = JSON.parse(readFileSync(packageJsonPath, 'utf-8'));
  */
 
 program
-  .name('cook-mcp')
+  .name('cook-mcp-windy')
   .description('HowToCook MCP Server - Intelligent Chinese recipe management and meal planning')
   .version(packageJson.version);
 
@@ -32,19 +32,19 @@ program
   .option('-m, --mode <mode>', 'Server mode: stdio (default) or http', 'stdio')
   .option('-v, --verbose', 'Enable verbose logging')
   .action((options) => {
-    console.log('🍳 Starting HowToCook MCP Server...');
-    console.log(`📋 Mode: ${options.mode}`);
-    
-    if (options.verbose) {
-      console.log('🔧 Verbose logging enabled');
+    // Only show output in non-stdio mode to avoid interfering with MCP communication
+    if (options.mode !== 'stdio') {
+      console.log('🍳 Starting HowToCook MCP Server...');
+      console.log(`📋 Mode: ${options.mode}`);
+
+      if (options.verbose) {
+        console.log('🔧 Verbose logging enabled');
+      }
     }
-    
+
     if (options.mode === 'stdio') {
-      console.log('📡 Server will communicate via stdio (MCP standard)');
-      console.log('🔗 Connect this server to your MCP client (e.g., Claude Desktop)');
-      
-      // Start the MCP server
-      const serverPath = join(__dirname, 'index.js');
+      // In stdio mode, use the pure MCP server without any console output
+      const serverPath = join(__dirname, 'mcp-server.js');
       const server = spawn('node', [serverPath], {
         stdio: 'inherit',
         env: {
@@ -68,7 +68,7 @@ program
     } else if (options.mode === 'http') {
       console.log(`🌐 Starting HTTP server on port ${options.port}`);
       console.log('⚠️  HTTP mode is for testing only. Use stdio mode for MCP clients.');
-      
+
       // Start HTTP server (for testing/debugging)
       startHttpServer(parseInt(options.port), options.verbose);
     } else {
@@ -221,7 +221,7 @@ function generateMCPConfig(clientType: string): any {
     mcpServers: {
       "howtocook": {
         command: "npx",
-        args: ["@windy-freedom/cook", "start"],
+        args: ["cook-mcp-windy", "start"],
         env: {}
       }
     }
