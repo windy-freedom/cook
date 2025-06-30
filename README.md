@@ -4,11 +4,20 @@ HowToCook MCP Server - Intelligent Chinese recipe management and meal planning f
 
 ## 🚀 Quick Start
 
-### Install and Run
-```bash
-# Start the MCP server
-npx cook-mcp-windy start
+### For Claude Desktop (MCP Client)
+```json
+{
+  "mcpServers": {
+    "howtocook": {
+      "command": "npx",
+      "args": ["cook-mcp-server"]
+    }
+  }
+}
+```
 
+### CLI Tools (Optional)
+```bash
 # Show available tools and features
 npx cook-mcp-windy info
 
@@ -21,14 +30,14 @@ npx cook-mcp-windy config
 
 ### MCP Client Configuration
 
-For Claude Desktop, add this to your MCP settings:
+**IMPORTANT**: Use the direct MCP server binary for Claude Desktop:
 
 ```json
 {
   "mcpServers": {
     "howtocook": {
       "command": "npx",
-      "args": ["cook-mcp-windy", "start"]
+      "args": ["cook-mcp-server"]
     }
   }
 }
