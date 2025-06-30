@@ -2,7 +2,7 @@
   "mcpServers": {
     "howtocook": {
       "command": "npx",
-      "args": ["cook-mcp-windy", "start"]
+      "args": ["cook-mcp-server"]
     }
   }
 }

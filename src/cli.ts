@@ -43,8 +43,8 @@ program
     }
 
     if (options.mode === 'stdio') {
-      // In stdio mode, use the pure MCP server without any console output
-      const serverPath = join(__dirname, 'mcp-server.js');
+      // In stdio mode, use the direct MCP server without any console output
+      const serverPath = join(__dirname, 'start-mcp.js');
       const server = spawn('node', [serverPath], {
         stdio: 'inherit',
         env: {
