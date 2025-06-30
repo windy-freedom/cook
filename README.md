@@ -10,7 +10,7 @@ HowToCook MCP Server - Intelligent Chinese recipe management and meal planning f
   "mcpServers": {
     "howtocook": {
       "command": "npx",
-      "args": ["cook-mcp-server"]
+      "args": ["cook-mcp-windy", "mcp"]
     }
   }
 }
@@ -30,14 +30,14 @@ npx cook-mcp-windy config
 
 ### MCP Client Configuration
 
-**IMPORTANT**: Use the direct MCP server binary for Claude Desktop:
+**IMPORTANT**: Use the MCP command for Claude Desktop:
 
 ```json
 {
   "mcpServers": {
     "howtocook": {
       "command": "npx",
-      "args": ["cook-mcp-server"]
+      "args": ["cook-mcp-windy", "mcp"]
     }
   }
 }

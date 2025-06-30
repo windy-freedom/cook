@@ -52,12 +52,12 @@ program
           VERBOSE: options.verbose ? 'true' : 'false'
         }
       });
-      
+
       server.on('error', (error) => {
         console.error('❌ Failed to start server:', error.message);
         process.exit(1);
       });
-      
+
       server.on('exit', (code) => {
         if (code !== 0) {
           console.error(`❌ Server exited with code ${code}`);
@@ -133,6 +133,25 @@ program
     console.log('📖 Documentation:');
     console.log('  • GitHub: https://github.com/windy-freedom/cook');
     console.log('  • Issues: https://github.com/windy-freedom/cook/issues');
+  });
+
+program
+  .command('mcp')
+  .description('Start MCP server directly (for Claude Desktop)')
+  .action(() => {
+    // Direct MCP server start - no console output
+    const serverPath = join(__dirname, 'start-mcp.js');
+    const server = spawn('node', [serverPath], {
+      stdio: 'inherit'
+    });
+
+    server.on('error', () => {
+      process.exit(1);
+    });
+
+    server.on('exit', (code) => {
+      process.exit(code || 0);
+    });
   });
 
 program
@@ -221,7 +240,7 @@ function generateMCPConfig(clientType: string): any {
     mcpServers: {
       "howtocook": {
         command: "npx",
-        args: ["cook-mcp-windy", "start"],
+        args: ["cook-mcp-windy", "mcp"],
         env: {}
       }
     }
